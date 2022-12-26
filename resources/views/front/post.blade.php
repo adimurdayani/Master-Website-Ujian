@@ -7,16 +7,18 @@
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-8">
-                    <h3 class="mb-3" align="justify">{{ $title }}</h3>
-                    <h4 class="mb-3" align="justify">{{ $post->title }}</h4>
+                    <h4 class="mb-2 text-title">{{ $title }}</h4>
                     <div style="max-height: 350px; overflow:hidden;">
                         <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}"
                             class="img-fluid">
                     </div>
-                    <p class="nonaktif-link">Oleh. <a href="/posts?author={{ $post->author->user_name }}"
-                            class="text-decoration-none"> {{
-                            $post->author->name }} </a> categori <a href="/posts?category={{ $post->category->slug }}"
-                            class="text-decoration-none">{{ $post->category->name }}</a></p>
+                    <small class="text-muted">Oleh.
+                        <a href="/posts?author={{ $post->author->user_name }}" class="text-decoration-none">{{
+                            $post->author->name }}</a> categori
+                        <a href="/posts?category={{ $post->category->slug }}" class="text-decoration-none">{{
+                            $post->category->name }} </a>
+                    </small>
+                    <h5 class="mt-3">{{ $post->title }}</h5>
                     <article class="my-3" align="justify">
                         {!! $post->body !!}
                     </article>
