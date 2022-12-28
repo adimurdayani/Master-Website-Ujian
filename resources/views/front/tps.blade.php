@@ -33,16 +33,14 @@
                 <div class="card-body text-center">
                     <strong class="nonaktif-link" class="card-title"> <a href="/posts/{{ $posts[0]->slug }}"
                             class="text-decoration-none text-dark">{{ $posts[0]->title }}</a></strong>
-                    <p class="nonaktif-link">
-                        <small class="text-muted" style="font-size: 80%">
-                            Oleh. <a href="/posts?author={{ $posts[0]->author->user_name }}"
-                                class="text-decoration-none"> {{ $posts[0]->author->name }} </a> categori <a
-                                href="/posts?category={{ $posts[0]->category->slug }}" class="text-decoration-none">{{
-                                $posts[0]->category->name }}</a> {{ date('l, d F Y', strtotime($posts[0]->created_at));
-                            }}
-                        </small>
-                    </p>
-                    <p class="card-text mb-3">{{ $posts[0]->exerpt }}</p>
+                    <small class="text-muted">
+                        Oleh. <a href="/posts?author={{ $posts[0]->author->user_name }}" class="text-decoration-none">
+                            {{ $posts[0]->author->name }} </a> categori <a
+                            href="/posts?category={{ $posts[0]->category->slug }}" class="text-decoration-none">{{
+                            $posts[0]->category->name }}</a> {{ date('l, d F Y', strtotime($posts[0]->created_at));
+                        }}
+                    </small>
+                    <p class="card-text mb-3 mb-3">{{ $posts[0]->exerpt }}</p>
                     @if (request()->routeIs('informatika.tps'))
                     <a href="/informatika/tps/{{ $posts[0]->slug }}"
                         class="text-decoration-none btn btn-primary">Selengkapnya</a>

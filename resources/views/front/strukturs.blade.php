@@ -71,7 +71,7 @@
                             <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}"
                                 class="img-fluid" style="max-height: 200px;">
                             <div class="card-body">
-                                <h4 class="card-title">{{ $post->title }}</h4>
+                                <h5 class="card-title">{{ $post->title }}</h5>
                                 <small class="text-muted">
                                     Oleh. <a href="/posts?author={{ $post->author->user_name }}"
                                         class="text-decoration-none"> {{ $post->author->name }} </a> categori <a

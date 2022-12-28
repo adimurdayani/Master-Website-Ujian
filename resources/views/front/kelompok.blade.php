@@ -12,11 +12,11 @@
                         <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->category->name }}"
                             class="img-fluid">
                     </div>
-                    <p class="nonaktif-link" style="font-size: 80%">Oleh. <a
-                            href="/posts?author={{ $post->author->user_name }}" class="text-decoration-none"> {{
+                    <small class="nonaktif-link">Oleh. <a href="/posts?author={{ $post->author->user_name }}"
+                            class="text-decoration-none"> {{
                             $post->author->name }} </a> categori <a href="/posts?category={{ $post->category->slug }}"
-                            class="text-decoration-none">{{ $post->category->name }}</a></p>
-                    <article class="my-3 fs-5" align="justify">
+                            class="text-decoration-none">{{ $post->category->name }}</a></small>
+                    <article class="my-3" align="justify">
                         {!! $post->body !!}
                     </article>
                     @if (request()->routeIs('informatika.kelompok'))
